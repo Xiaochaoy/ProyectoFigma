@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/zeroFragment">
+
+    <fragment
+        android:id="@+id/log_inFragment"
+        android:name="com.example.proyectofigma.log_inFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_log_in" />
+    <action
+        android:id="@+id/action_log_inFragment"
+        app:destination="@+id/log_inFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/sig_inFragment"
+        android:name="com.example.proyectofigma.sig_inFragment"
+        android:label="fragment_sig_in"
+        tools:layout="@layout/fragment_sig_in" />
+    <fragment
+        android:id="@+id/terminosFragment"
+        android:name="com.example.proyectofigma.terminosFragment"
+        android:label="fragment_terminos"
+        tools:layout="@layout/fragment_terminos" />
+    <fragment
+        android:id="@+id/log_in_googleFragment"
+        android:name="com.example.proyectofigma.log_in_googleFragment"
+        android:label="fragment_log_in_google"
+        tools:layout="@layout/fragment_log_in_google" />
+    <fragment
+        android:id="@+id/log_in_steamFragment"
+        android:name="com.example.proyectofigma.log_in_steamFragment"
+        android:label="fragment_log_in_steam"
+        tools:layout="@layout/fragment_log_in_steam" />
+    <fragment
+        android:id="@+id/log_in_epicFragment"
+        android:name="com.example.proyectofigma.log_in_epicFragment"
+        android:label="fragment_log_in_epic"
+        tools:layout="@layout/fragment_log_in_epic" />
+    <fragment
+        android:id="@+id/ajustesFragment"
+        android:name="com.example.proyectofigma.ajustesFragment"
+        android:label="fragment_ajustes"
+        tools:layout="@layout/fragment_ajustes" />
+    <fragment
+        android:id="@+id/juegosFragment"
+        android:name="com.example.proyectofigma.juegosFragment"
+        android:label="fragment_juegos"
+        tools:layout="@layout/fragment_juegos" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.proyectofigma.menuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.proyectofigma.perfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/recuperar_contrasenyaFragment"
+        android:name="com.example.proyectofigma.recuperar_contrasenyaFragment"
+        android:label="fragment_recuperar_contrasenya"
+        tools:layout="@layout/fragment_recuperar_contrasenya" />
+    <fragment
+        android:id="@+id/juego_cofreFragment"
+        android:name="com.example.proyectofigma.juego_cofreFragment"
+        android:label="fragment_juego_cofre"
+        tools:layout="@layout/fragment_juego_cofre" />
+    <fragment
+        android:id="@+id/cofre_tiendaFragment"
+        android:name="com.example.proyectofigma.cofre_tiendaFragment"
+        android:label="fragment_cofre_tienda"
+        tools:layout="@layout/fragment_cofre_tienda" />
+    <fragment
+        android:id="@+id/juego_correrFragment"
+        android:name="com.example.proyectofigma.juego_correrFragment"
+        android:label="fragment_juego_correr"
+        tools:layout="@layout/fragment_juego_correr" />
+    <fragment
+        android:id="@+id/correr_pausaFragment"
+        android:name="com.example.proyectofigma.correr_pausaFragment"
+        android:label="fragment_correr_pausa"
+        tools:layout="@layout/fragment_correr_pausa" />
+    <fragment
+        android:id="@+id/juego_tres_en_rallaFragment"
+        android:name="com.example.proyectofigma.juego_tres_en_rallaFragment"
+        android:label="fragment_juego_tres_en_ralla"
+        tools:layout="@layout/fragment_juego_tres_en_ralla" />
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.proyectofigma.inicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio" />
+        <action
+            android:id="@+id/action_inicioFragment"
+            app:destination="@+id/inicioFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    <fragment
+        android:id="@+id/zeroFragment"
+        android:name="com.example.proyectofigma.zeroFragment"
+        android:label="fragment_zero"
+        tools:layout="@layout/fragment_zero" />
+</navigation>

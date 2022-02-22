@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_color"
+        android:paddingBottom="20dp"
+        tools:context=".log_inFragment">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="182dp"
+            android:layout_height="162dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Iniciar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Iniciar Session"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <Button
+            android:id="@+id/Crear"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Crear Session"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Iniciar" />
+
+        <View
+            android:id="@+id/barra"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="80dp"
+            android:background="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Crear" />
+
+        <ImageView
+            android:id="@+id/steam"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/steam"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintRight_toLeftOf="@+id/epic"
+            app:layout_constraintTop_toTopOf="@+id/epic" />
+
+        <ImageView
+            android:id="@+id/epic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/epic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barra" />
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/google"
+            android:layout_marginStart="30dp"
+            app:layout_constraintLeft_toRightOf="@+id/epic"
+            app:layout_constraintTop_toTopOf="@+id/epic" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
