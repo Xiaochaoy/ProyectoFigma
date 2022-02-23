@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +21,6 @@ import kotlinx.coroutines.Delay;
 
 public class inicioFragment extends Fragment {
 
-    ImageView logo;
-    TextView nom;
     NavController navController;
 
     @Override
@@ -36,14 +35,13 @@ public class inicioFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        nom = view.findViewById(R.id.nombre);
-        logo = view.findViewById(R.id.logo);
-
-        logo.setOnClickListener(new View.OnClickListener() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
+            public void run() {
+                // Do something after 5s = 5000ms
                 navController.navigate(R.id.action_log_inFragment);
             }
-        });
+        }, 1500);
     }
 }

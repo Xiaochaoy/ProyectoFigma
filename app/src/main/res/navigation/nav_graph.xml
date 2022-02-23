@@ -10,13 +10,6 @@
         android:name="com.example.proyectofigma.log_inFragment"
         android:label="Inicio"
         tools:layout="@layout/fragment_log_in" />
-    <action
-        android:id="@+id/action_log_inFragment"
-        app:destination="@+id/log_inFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
     <fragment
         android:id="@+id/sig_inFragment"
         android:name="com.example.proyectofigma.sig_inFragment"
@@ -97,16 +90,70 @@
         android:name="com.example.proyectofigma.inicioFragment"
         android:label="Inicio"
         tools:layout="@layout/fragment_inicio" />
-        <action
-            android:id="@+id/action_inicioFragment"
-            app:destination="@+id/inicioFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@android:anim/fade_in"
-            app:popExitAnim="@android:anim/fade_out"/>
     <fragment
         android:id="@+id/zeroFragment"
         android:name="com.example.proyectofigma.zeroFragment"
         android:label="fragment_zero"
         tools:layout="@layout/fragment_zero" />
+    <fragment
+        android:id="@+id/iniciarFragment"
+        android:name="com.example.proyectofigma.IniciarFragment"
+        android:label="fragment_iniciar"
+        tools:layout="@layout/fragment_iniciar" />
+    <action
+        android:id="@+id/action_inicioFragment"
+        app:destination="@+id/inicioFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out"/>
+    <action
+        android:id="@+id/action_log_inFragment"
+        app:destination="@+id/log_inFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_iniciarFragment"
+        app:destination="@+id/iniciarFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_registrarFragment"
+        app:destination="@+id/sig_inFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_steamFragment"
+        app:destination="@+id/log_in_steamFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_epicFragment"
+        app:destination="@+id/log_in_epicFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_googleFragment"
+        app:destination="@+id/log_in_googleFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_menuFragment"
+        app:destination="@+id/menuFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
 </navigation>
