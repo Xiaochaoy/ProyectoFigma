@@ -34,7 +34,28 @@ public class sig_inFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
 
+        terminos = view.findViewById(R.id.terminos);
+        crear = view.findViewById(R.id.crearcuenta);
+        iniciar = view.findViewById(R.id.texto2);
 
+        terminos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_terminos);
+            }
+        });
+        crear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_menuFragment);
+            }
+        });
+        iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_iniciarFragment);
+            }
+        });
 
 
     }
