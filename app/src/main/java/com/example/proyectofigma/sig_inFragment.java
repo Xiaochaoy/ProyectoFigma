@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import org.jetbrains.annotations.Nullable;
 
 
@@ -21,6 +23,8 @@ public class sig_inFragment extends Fragment {
     NavController navController;
     TextView terminos, iniciar;
     Button crear;
+    TextInputLayout nombre,email,password;
+    boolean fallo = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +38,9 @@ public class sig_inFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
 
+        nombre = view.findViewById(R.id.nombre);
+        email = view.findViewById(R.id.usuario);
+        password = view.findViewById(R.id.contrasenya);
         terminos = view.findViewById(R.id.terminos);
         crear = view.findViewById(R.id.crearcuenta);
         iniciar = view.findViewById(R.id.texto2);
@@ -47,9 +54,41 @@ public class sig_inFragment extends Fragment {
         crear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_menuFragment);
+                if (nombre.getEditText().length()==0){
+                    nombre.setError("eeeeee ponte algo");
+                    fallo = true;
+                }else{
+                    nombre.setError("");
+                    fallo = false;
+                }
+                if (email.getEditText().length()==0){
+                    email.setError("pon algo cabrom");
+                    fallo = true;
+                }else if (email.getEditText().length()<=4){
+                    email.setError("ponlo bien");
+                    fallo = true;
+                } else{
+                    email.setError("");
+                    fallo = false;
+                }
+                if (password.getEditText().length()==0) {
+                    password.setError("pon algo cabrom");
+                    fallo = true;
+                }else if (password.getEditText().length()<=5){
+                    fallo = true;
+                    email.setError("Muy flojo tu contraseña, pon lo mas largo");
+                }else{
+                    password.setError("");
+                    fallo = false;
+                }
+
+                if (!fallo){
+                    navController.navigate(R.id.action_menuFragment);
+                }
             }
         });
+
+
         iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

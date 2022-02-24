@@ -36,7 +36,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        app:endIconMode="none"
+        app:errorEnabled="true"
         app:layout_constraintTop_toBottomOf="@id/texto"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -53,8 +53,7 @@
         android:id="@+id/usuario"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:endIconMode="none"
+        app:errorEnabled="true"
         app:layout_constraintTop_toBottomOf="@id/nombre"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -71,8 +70,7 @@
         android:id="@+id/contrasenya"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:endIconMode="none"
+        app:errorEnabled="true"
         app:layout_constraintTop_toBottomOf="@id/usuario"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
