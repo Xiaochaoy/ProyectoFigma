@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -27,10 +28,8 @@ public class IniciarFragment extends Fragment {
 
     TextInputLayout contrasenya, email;
     Button iniciarsesion;
-    CheckBox ok;
-    Context mcontext;
+    TextView olvidado, crear;
     NavController navController;
-    public static final String MY_PREFS_NAME = "user_pass_pref";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -42,36 +41,30 @@ public class IniciarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-        contrasenya = view.findViewById(R.id.contrasenya);
-        email = view.findViewById(R.id.usuario);
-        iniciarsesion = view.findViewById(R.id.iniciarsesion);
-        ok = view.findViewById(R.id.ok);
-        mcontext = getActivity();
         navController = Navigation.findNavController(view);
-
-        SharedPreferences prefs = mcontext.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-        String restoredText = prefs.getString("text",null);
-        if (restoredText != null){
-            String name = prefs.getString("username", "");
-            String password = prefs.getString("password", "");
-            email.getEditText().setText(name);
-            contrasenya.getEditText().setText(password);
-        }
+        iniciarsesion = view.findViewById(R.id.iniciarsesion);
+        olvidado = view.findViewById(R.id.olvidado);
+        crear = view.findViewById(R.id.texto2);
 
         iniciarsesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (ok.isChecked()){
-                    SharedPreferences.Editor editor = mcontext.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
-                    editor.putString("username", email.getEditText().getText().toString());
-                    editor.putString("password", contrasenya.getEditText().getText().toString());
-                    editor.apply();
-                }
-                navController.navigate(R.id.menuFragment);
+                navController.navigate(R.id.action_menuFragment);
             }
         });
+        olvidado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_recuperar);
+            }
+        });
+        crear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_registrarFragment);
+            }
+        });
+
 
     }
 }
