@@ -16,8 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.proyectofigma.databinding.FragmentMenuBinding;
-import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
-import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 
 import org.jetbrains.annotations.Nullable;
 
