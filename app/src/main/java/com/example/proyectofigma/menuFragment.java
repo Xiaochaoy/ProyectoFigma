@@ -33,13 +33,6 @@ public class menuFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Do something after 5s = 5000ms
-                navController.navigate(R.id.action_inicioFragment);
-            }
-        }, 1500);
+
     }
 }

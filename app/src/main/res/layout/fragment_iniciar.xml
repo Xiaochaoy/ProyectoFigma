@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_color"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fillViewport="true">
 
     <ImageView
@@ -45,6 +50,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:hint="Email Address"
+            android:text="xiaochaoy@elpuig.xeill.net"
             android:singleLine="true"
             android:backgroundTint="@android:color/transparent"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,6 +69,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Password"
+            android:text="Apruebame_Dani"
             android:maxLength="16"
             android:singleLine="true"
             android:backgroundTint="@android:color/transparent"/>
@@ -97,15 +104,18 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/purple_200"/>
 
-    <Button
+    <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/iniciarsesion"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
         app:layout_constraintTop_toBottomOf="@id/olvidado"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="50dp"
-        android:text="Iniciar sesión"/>
+        android:layout_marginTop="50dp"/>
+
+
+
     <TextView
         android:id="@+id/texto1"
         android:layout_width="wrap_content"
@@ -115,7 +125,8 @@
         app:layout_constraintRight_toLeftOf="@id/texto2"
         android:text="No tienes cuenta?"
         android:textColor="@color/black"
-        android:layout_marginLeft="100dp"/>
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"/>
     <TextView
         android:id="@+id/texto2"
         android:layout_width="wrap_content"
@@ -125,6 +136,8 @@
         app:layout_constraintRight_toRightOf="parent"
         android:text="Crea tu cuenta"
         android:textColor="@color/purple_200"
-        android:layout_marginRight="100dp"/>
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
