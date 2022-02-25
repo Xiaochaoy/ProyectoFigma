@@ -3,12 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_color"
     tools:context=".log_in_epicFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/epic" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="270sp"
+        android:layout_height="120sp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="320dp"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Ya has iniciado con la sesion de Epic Games"/>
+
+    <Button
+        android:id="@+id/finalizar3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_gravity="bottom|center"
+        android:text="Finalizar"/>
 
 </FrameLayout>
