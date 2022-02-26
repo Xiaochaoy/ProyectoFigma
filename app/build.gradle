@@ -45,5 +45,4 @@ dependencies {
 
     // https://github.com/roynx98/transition-button-android
     implementation 'com.royrodriguez:transitionbutton:0.2.0'
-
 }

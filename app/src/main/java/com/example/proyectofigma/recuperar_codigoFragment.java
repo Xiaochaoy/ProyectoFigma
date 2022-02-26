@@ -14,16 +14,16 @@ import android.widget.Button;
 
 import org.jetbrains.annotations.Nullable;
 
-public class recuperar_contrasenyaFragment extends Fragment {
+public class recuperar_codigoFragment extends Fragment {
 
     NavController navController;
-    Button finalizar;
+    Button siguiente;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recuperar_contrasenya, container, false);
+        return inflater.inflate(R.layout.fragment_recuperar_codigo, container, false);
     }
 
     @Override
@@ -32,12 +32,12 @@ public class recuperar_contrasenyaFragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        finalizar = view.findViewById(R.id.recuperado);
+        siguiente = view.findViewById(R.id.continuar);
 
-        finalizar.setOnClickListener(new View.OnClickListener() {
+        siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_iniciarFragment);
+                navController.navigate(R.id.action_recuperar);
             }
         });
     }

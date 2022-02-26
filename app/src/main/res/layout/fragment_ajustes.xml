@@ -3,12 +3,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_color"
     tools:context=".ajustesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajustes"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center|top"/>
 
+    <Switch
+        android:id="@+id/musica"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:text="Musica         "
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center|left"/>
+
+    <Switch
+        android:id="@+id/sonido"
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Sonido          "
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold|italic" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="Idioma"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="110dp"/>
+    <Spinner
+        android:id="@+id/idioma"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="112dp" />
 </FrameLayout>
