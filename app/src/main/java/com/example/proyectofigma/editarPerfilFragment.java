@@ -80,7 +80,7 @@ public class editarPerfilFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 fotos.setVisibility(View.GONE);
-                foto.setImageResource(R.drawable.perfil);
+//                foto.setImageResource(R.drawable.perfil);
                 guardar.setVisibility(View.VISIBLE);
             }
         });

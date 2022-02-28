@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/editarPerfilFragment">
+    app:startDestination="@id/juego_tres_en_rallaFragment">
 
     <fragment
         android:id="@+id/log_inFragment"
@@ -82,9 +82,9 @@
         tools:layout="@layout/fragment_correr_pausa" />
     <fragment
         android:id="@+id/juego_tres_en_rallaFragment"
-        android:name="com.example.proyectofigma.juego_tres_en_rallaFragment"
+        android:name="com.example.proyectofigma.tres_en_rallaFragment"
         android:label="fragment_juego_tres_en_ralla"
-        tools:layout="@layout/fragment_juego_tres_en_ralla" />
+        tools:layout="@layout/fragment_tres_en_ralla" />
     <fragment
         android:id="@+id/inicioFragment"
         android:name="com.example.proyectofigma.inicioFragment"
