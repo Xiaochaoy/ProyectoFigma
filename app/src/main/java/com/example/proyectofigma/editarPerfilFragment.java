@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +27,7 @@ public class editarPerfilFragment extends Fragment {
     LinearLayout fotos;
     RelativeLayout fondo;
     Button guardar;
+    NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +39,7 @@ public class editarPerfilFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
 
         nombre = view.findViewById(R.id.nombre_perfil2);
         correo = view.findViewById(R.id.correo_perfil2);
@@ -80,7 +84,7 @@ public class editarPerfilFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 fotos.setVisibility(View.GONE);
-//                foto.setImageResource(R.drawable.perfil);
+                foto.setImageResource(R.drawable.perfil);
                 guardar.setVisibility(View.VISIBLE);
             }
         });
@@ -112,6 +116,12 @@ public class editarPerfilFragment extends Fragment {
             public void onClick(View view) {
                 password.getEditText().setFocusableInTouchMode(true);
                 password.getEditText().setClickable(true);
+            }
+        });
+        guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_perfil);
             }
         });
     }

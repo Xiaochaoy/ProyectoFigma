@@ -28,20 +28,20 @@
             <ImageView
                 android:id="@+id/pajuegos"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"/>
-            <!--                android:src="@drawable/juegos"-->
+                android:layout_height="500dp"
+                android:src="@drawable/juegos"/>
 
             <ImageView
                 android:id="@+id/paperfil"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"/>
-<!--                android:src="@drawable/perfil"/>-->
+                android:layout_height="500dp"
+                android:src="@drawable/perfil"/>
 
             <ImageView
                 android:id="@+id/paajustes"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"/>
-<!--                android:src="@drawable/ajustes"/>-->
+                android:layout_height="500dp"
+                android:src="@drawable/ajustes"/>
 
             <ImageView
                 android:id="@+id/paranking"

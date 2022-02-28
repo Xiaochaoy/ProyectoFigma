@@ -4,19 +4,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    tools:context=".tres_en_rallaFragment">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:flexDirection="row"
+        app:justifyContent="space_between"
+        app:alignItems="stretch"
+        app:alignContent="stretch" >
+
+
+        <ImageView
+            android:id="@+id/textview1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/perfil" />
+
+        <TextView
+            android:id="@+id/jugador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:gravity="center"
+            android:textSize="50dp"/>
+
+        <TextView
+            android:id="@+id/jugador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="50dp"/>
+
+        <ImageView
+            android:id="@+id/textview2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/perfil"/>
+
+
+    </com.google.android.flexbox.FlexboxLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/background_color"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="12dp"
-        android:weightSum="1"
-        tools:context=".tres_en_rallaFragment">
+        android:weightSum="1">
 
 
         <RelativeLayout
@@ -171,7 +218,6 @@
                 android:layout_marginEnd="2dp"
                 android:visibility="invisible"
                 app:srcCompat="@drawable/tachado" />
-
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/juego_tres_en_rallaFragment">
+    app:startDestination="@id/zeroFragment">
 
     <fragment
         android:id="@+id/log_inFragment"
@@ -81,7 +81,7 @@
         android:label="fragment_correr_pausa"
         tools:layout="@layout/fragment_correr_pausa" />
     <fragment
-        android:id="@+id/juego_tres_en_rallaFragment"
+        android:id="@+id/tres_en_rallaFragment"
         android:name="com.example.proyectofigma.tres_en_rallaFragment"
         android:label="fragment_juego_tres_en_ralla"
         tools:layout="@layout/fragment_tres_en_ralla" />
@@ -111,153 +111,177 @@
         android:label="fragment_editar_perfil"
         tools:layout="@layout/fragment_editar_perfil" />
     <fragment
-        android:id="@+id/rankingFragment"
-        android:name="com.example.proyectofigma.rankingFragment"
-        android:label="fragment_ranking"
-        tools:layout="@layout/fragment_ranking" />
+        android:id="@+id/zero3rallaFragment"
+        android:name="com.example.proyectofigma.zero3rallaFragment"
+        android:label="fragment_zero3ralla"
+        tools:layout="@layout/fragment_zero3ralla" />
+    <fragment
+        android:id="@+id/inicio3rallaFragment"
+        android:name="com.example.proyectofigma.inicio3rallaFragment"
+        android:label="fragment_inicio3ralla"
+        tools:layout="@layout/fragment_inicio3ralla" />
+    <fragment
+    android:id="@+id/rankingFragment"
+    android:name="com.example.proyectofigma.rankingFragment"
+    android:label="fragment_ranking"
+    tools:layout="@layout/fragment_ranking" />
     <action
-        android:id="@+id/action_inicioFragment"
-        app:destination="@+id/inicioFragment"
+    android:id="@+id/action_inicioFragment"
+    app:destination="@+id/inicioFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_log_inFragment"
+    app:destination="@+id/log_inFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_iniciarFragment"
+    app:destination="@+id/iniciarFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_registrarFragment"
+    app:destination="@+id/sig_inFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_steamFragment"
+    app:destination="@+id/log_in_steamFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_epicFragment"
+    app:destination="@+id/log_in_epicFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_googleFragment"
+    app:destination="@+id/log_in_googleFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_menuFragment"
+    app:destination="@+id/menuFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_recuperar"
+    app:destination="@+id/recuperar_contrasenyaFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_terminos"
+    app:destination="@+id/terminosFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_ajustes"
+    app:destination="@+id/ajustesFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_juegos"
+    app:destination="@+id/juegosFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_perfil"
+    app:destination="@+id/perfilFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_cofre"
+    app:destination="@+id/juego_cofreFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_cofre_tienda"
+    app:destination="@+id/cofre_tiendaFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_correr"
+    app:destination="@+id/juego_correrFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_correr_pausa"
+    app:destination="@+id/correr_pausaFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_recuperar_codigo"
+    app:destination="@+id/recuperar_codigoFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_ranking"
+    app:destination="@+id/rankingFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+    android:id="@+id/action_editar"
+    app:destination="@+id/editarPerfilFragment"
+    app:enterAnim="@android:anim/fade_in"
+    app:exitAnim="@android:anim/fade_out"
+    app:popEnterAnim="@android:anim/fade_in"
+    app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_zeroralla"
+        app:destination="@+id/zero3rallaFragment"
         app:enterAnim="@android:anim/fade_in"
         app:exitAnim="@android:anim/fade_out"
         app:popEnterAnim="@android:anim/fade_in"
         app:popExitAnim="@android:anim/fade_out" />
     <action
-        android:id="@+id/action_log_inFragment"
-        app:destination="@+id/log_inFragment"
+        android:id="@+id/action_inicioralla"
+        app:destination="@+id/inicio3rallaFragment"
         app:enterAnim="@android:anim/fade_in"
         app:exitAnim="@android:anim/fade_out"
         app:popEnterAnim="@android:anim/fade_in"
         app:popExitAnim="@android:anim/fade_out" />
     <action
-        android:id="@+id/action_iniciarFragment"
-        app:destination="@+id/iniciarFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_registrarFragment"
-        app:destination="@+id/sig_inFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_steamFragment"
-        app:destination="@+id/log_in_steamFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_epicFragment"
-        app:destination="@+id/log_in_epicFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_googleFragment"
-        app:destination="@+id/log_in_googleFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_menuFragment"
-        app:destination="@+id/menuFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_recuperar"
-        app:destination="@+id/recuperar_contrasenyaFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_terminos"
-        app:destination="@+id/terminosFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_ajustes"
-        app:destination="@+id/ajustesFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_juegos"
-        app:destination="@+id/juegosFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_perfil"
-        app:destination="@+id/perfilFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_juego3ralla"
-        app:destination="@+id/juego_tres_en_rallaFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_cofre"
-        app:destination="@+id/juego_cofreFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_cofre_tienda"
-        app:destination="@+id/cofre_tiendaFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_correr"
-        app:destination="@+id/juego_correrFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_correr_pausa"
-        app:destination="@+id/correr_pausaFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_recuperar_codigo"
-        app:destination="@+id/recuperar_codigoFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_ranking"
-        app:destination="@+id/rankingFragment"
-        app:enterAnim="@android:anim/fade_in"
-        app:exitAnim="@android:anim/fade_out"
-        app:popEnterAnim="@android:anim/fade_in"
-        app:popExitAnim="@android:anim/fade_out" />
-    <action
-        android:id="@+id/action_editar"
-        app:destination="@+id/editarPerfilFragment"
+        android:id="@+id/action_tres_ralla"
+        app:destination="@+id/tres_en_rallaFragment"
         app:enterAnim="@android:anim/fade_in"
         app:exitAnim="@android:anim/fade_out"
         app:popEnterAnim="@android:anim/fade_in"

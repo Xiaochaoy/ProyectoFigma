@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -24,6 +25,7 @@ public class sig_inFragment extends Fragment {
     TextView terminos, iniciar;
     Button crear;
     TextInputLayout nombre,email,password;
+    ImageView exit;
     boolean fallo = false;
 
     @Override
@@ -44,6 +46,14 @@ public class sig_inFragment extends Fragment {
         terminos = view.findViewById(R.id.terminos);
         crear = view.findViewById(R.id.crearcuenta);
         iniciar = view.findViewById(R.id.texto2);
+        exit = view.findViewById(R.id.patras);
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_log_inFragment);
+            }
+        });
 
         terminos.setOnClickListener(new View.OnClickListener() {
             @Override

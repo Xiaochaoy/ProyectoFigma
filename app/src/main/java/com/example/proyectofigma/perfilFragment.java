@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -21,6 +22,7 @@ public class perfilFragment extends Fragment {
 
     TextInputLayout nombre,correo,password;
     Button editar,cerrar;
+    ImageView exit;
     NavController navController;
 
     @Override
@@ -33,6 +35,7 @@ public class perfilFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        exit = view.findViewById(R.id.patras5);
         navController = Navigation.findNavController(view);
         nombre = view.findViewById(R.id.nombre_perfil);
         correo = view.findViewById(R.id.correo_perfil);
@@ -46,6 +49,13 @@ public class perfilFragment extends Fragment {
         correo.getEditText().setClickable(false);
         password.getEditText().setFocusable(false);
         password.getEditText().setClickable(false);
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menuFragment);
+            }
+        });
 
         editar.setOnClickListener(new View.OnClickListener() {
             @Override

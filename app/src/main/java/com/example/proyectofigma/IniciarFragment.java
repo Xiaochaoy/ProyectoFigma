@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -33,6 +34,7 @@ public class IniciarFragment extends Fragment {
     TransitionButton iniciarsesion;
     TextView olvidado, crear;
     NavController navController;
+    ImageView exit;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,13 +46,20 @@ public class IniciarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        exit = view.findViewById(R.id.patras2);
         email = view.findViewById(R.id.usuario);
         contrasenya = view.findViewById(R.id.contrasenya);
         navController = Navigation.findNavController(view);
         iniciarsesion = view.findViewById(R.id.iniciarsesion);
         olvidado = view.findViewById(R.id.olvidado);
         crear = view.findViewById(R.id.texto2);
-//        navController.navigate(R.id.action_menuFragment);
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_log_inFragment);
+            }
+        });
 
         iniciarsesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +95,7 @@ public class IniciarFragment extends Fragment {
         olvidado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_recuperar);
+                navController.navigate(R.id.action_recuperar_codigo);
             }
         });
         crear.setOnClickListener(new View.OnClickListener() {

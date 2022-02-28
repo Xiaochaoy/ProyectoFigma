@@ -169,8 +169,8 @@
                 android:id="@+id/borrar"
                 android:layout_width="300dp"
                 android:layout_height="250dp"
-                android:background="#F44336"/>
-<!--                android:src="@drawable/borrar" -->
+                android:background="#F44336"
+                android:src="@drawable/borrar"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

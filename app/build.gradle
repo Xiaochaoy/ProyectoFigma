@@ -45,4 +45,7 @@ dependencies {
 
     // https://github.com/roynx98/transition-button-android
     implementation 'com.royrodriguez:transitionbutton:0.2.0'
+
+    // https://github.com/google/flexbox-layout
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
 }
