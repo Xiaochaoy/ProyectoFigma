@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -18,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import org.jetbrains.annotations.Nullable;
@@ -28,10 +30,18 @@ public class tres_en_rallaFragment extends Fragment {
     private int[] casillas;
     private int[] tachados;
     private Partida partida;
-    ImageView a1,a2,a3,b1,b2,b3,c1,c2,c3;
-    ImageView t0,t1,t2,t3,t4,t5,t6,t7;
-    TextView j1,j2;
-    int p1,p2 = 0;
+    ImageView a1, a2, a3, b1, b2, b3, c1, c2, c3;
+    ImageView t0, t1, t2, t3, t4, t5, t6, t7;
+    TextView j1, j2;
+    TextView mensaje;
+    int p1, p2 = 0;
+    ImageView chat, llorar,enfadar, chat1,chat2;
+    LinearLayout emoji;
+    boolean a = true;
+    boolean espera = true;
+    boolean espera2 = true;
+    Button restart, exit;
+    NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,6 +76,12 @@ public class tres_en_rallaFragment extends Fragment {
 
         partida = new Partida();
 
+        chat = view.findViewById(R.id.chat);
+        chat1 = view.findViewById(R.id.chat1);
+        chat2 = view.findViewById(R.id.chat2);
+        llorar = view.findViewById(R.id.llorar);
+        enfadar = view.findViewById(R.id.enfadado);
+        emoji = view.findViewById(R.id.emoji);
         a1 = view.findViewById(R.id.a1);
         a2 = view.findViewById(R.id.a2);
         a3 = view.findViewById(R.id.a3);
@@ -85,6 +101,141 @@ public class tres_en_rallaFragment extends Fragment {
         t7 = view.findViewById(R.id.tach_7);
         j1 = view.findViewById(R.id.jugador1);
         j2 = view.findViewById(R.id.jugador2);
+        mensaje = view.findViewById(R.id.ganador);
+        restart = view.findViewById(R.id.restart);
+        exit = view.findViewById(R.id.exit_3ralla);
+        navController = Navigation.findNavController(view);
+
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (a){
+                    emoji.setVisibility(View.VISIBLE);
+                    a = false;
+                }else{
+                    emoji.setVisibility(View.GONE);
+                    a = true;
+                }
+            }
+        });
+
+        llorar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (partida.getJugador() == 1){
+                    if (espera){
+                        espera = false;
+                        chat1.setImageResource(R.drawable.llorar_left);
+                        chat1.setVisibility(View.VISIBLE);
+                        emoji.setVisibility(View.GONE);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                chat1.setVisibility(View.GONE);
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        espera = true;
+                                    }
+                                }, 1500);
+                            }
+                        }, 1000);
+                    }
+
+                }else{
+                    if (espera2){
+                        espera2 = false;
+                        chat2.setImageResource(R.drawable.llorar_right);
+                        chat2.setVisibility(View.VISIBLE);
+                        emoji.setVisibility(View.GONE);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                chat2.setVisibility(View.GONE);
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        espera2 = true;
+                                    }
+                                }, 1500);
+                            }
+                        }, 1000);
+                    }
+                }
+            }
+        });
+
+        enfadar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (partida.getJugador() == 1){
+                    if (espera){
+                        espera = false;
+                        chat1.setImageResource(R.drawable.enfadado_left);
+                        chat1.setVisibility(View.VISIBLE);
+                        emoji.setVisibility(View.GONE);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                chat1.setVisibility(View.GONE);
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        espera = true;
+                                    }
+                                }, 1500);
+                            }
+                        }, 1000);
+                    }
+
+                }else{
+                    if (espera2){
+                        espera2 = false;
+                        chat2.setImageResource(R.drawable.enfadado_right);
+                        chat2.setVisibility(View.VISIBLE);
+                        emoji.setVisibility(View.GONE);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                chat2.setVisibility(View.GONE);
+                                final Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        espera2 = true;
+                                    }
+                                }, 1500);
+                            }
+                        }, 1000);
+                    }
+                }
+            }
+        });
+
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restart(8,view);
+                mensaje.setVisibility(View.GONE);
+                restart.setVisibility(View.GONE);
+                exit.setVisibility(View.GONE);
+                j1.setText("0");
+                j2.setText("0");
+            }
+        });
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_inicioralla);
+            }
+        });
 
 
         a1.setOnClickListener(new View.OnClickListener() {
@@ -143,37 +294,37 @@ public class tres_en_rallaFragment extends Fragment {
         });
     }
 
-    public void tocarCasilla(View view){
+    public void tocarCasilla(View view) {
 
         int casilla = 0;
 
-        for(int i = 0; i < casillas.length; i++){
-            if(casillas[i] == view.getId()){
+        for (int i = 0; i < casillas.length; i++) {
+            if (casillas[i] == view.getId()) {
                 casilla = i;
                 break;
             }
         }
 
-        if(!partida.isTerminada() && partida.getCasillasSeleccionadas(casilla)==0 && jugadores==2)
+        if (!partida.isTerminada() && partida.getCasillasSeleccionadas(casilla) == 0 && jugadores == 2)
             marcarCasilla(casilla, view);
     }
 
     /**
      * Metodo que marca una casilla con un aspa o con un circulo
+     *
      * @param casilla Numero de la casilla que se marcara
      */
-    private void marcarCasilla(int casilla,View view){
+    private void marcarCasilla(int casilla, View view) {
 
         ImageView imagen;
 
         imagen = view.findViewById(casillas[casilla]);
 
-        if(partida.getJugador()==1 && partida.getCasillasSeleccionadas(casilla)==0){
+        if (partida.getJugador() == 1 && partida.getCasillasSeleccionadas(casilla) == 0) {
             imagen.setImageResource(R.drawable.aspa);
             partida.setCasillasSeleccionadas(partida.getJugador(), casilla);
             partida.cambiarJugador();
-        }
-        else if(partida.getJugador()==2 && partida.getCasillasSeleccionadas(casilla)==0){
+        } else if (partida.getJugador() == 2 && partida.getCasillasSeleccionadas(casilla) == 0) {
             imagen.setImageResource(R.drawable.circulo);
             partida.setCasillasSeleccionadas(partida.getJugador(), casilla);
             partida.cambiarJugador();
@@ -181,92 +332,40 @@ public class tres_en_rallaFragment extends Fragment {
 
         //
         //comprobar si alguien ha ganado
-        if(partida.comprobarGanador()[0]==1) {
+        if (partida.comprobarGanador()[0] == 1) {
             partida.setTerminada(true);
             p1++;
             String puntos = String.valueOf(p1);
             j1.setText(puntos);
 
-            //mostrar mensaje por pantalla
-//            TextView mensaje = findViewById(R.id.mensaje);
-//            mensaje.setText("Ha ganado el jugador 1");
-//
-//            mensaje.setVisibility(View.VISIBLE);
+            tachar(partida.comprobarGanador()[1], view);
 
-
-            tachar(partida.comprobarGanador()[1],view);
-            //
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    //volver al layout original de la actividad
-//                    ImageView tachado = view.findViewById(tachados[partida.comprobarGanador()[1]]);
-//
-//                    tachado.setVisibility(View.GONE);
-//                    partida = new Partida();
-//                }
-//            }, 2500);
-        }
-        else if(partida.comprobarGanador()[0]==2) {
+        } else if (partida.comprobarGanador()[0] == 2) {
             partida.setTerminada(true);
             p2++;
             String puntos = String.valueOf(p2);
             j2.setText(puntos);
-            //mostrar mensaje por pantalla
-//            TextView mensaje = findViewById(R.id.mensaje);
-//            mensaje.setText(R.string.gana_jugador2);
-//
-//            mensaje.setVisibility(View.VISIBLE);
+            tachar(partida.comprobarGanador()[1], view);
 
-            //
-
-            tachar(partida.comprobarGanador()[1],view);
-            //
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    //volver al layout original de la actividad
-//                    ImageView tachado = view.findViewById(tachados[partida.comprobarGanador()[1]]);
-//
-//                    tachado.setVisibility(View.GONE);
-//                    partida = new Partida();
-//                }
-//            }, 2500);
-        }else if(partida.comprobarGanador()[0]==3) {
+        }else if (partida.comprobarGanador()[0] == 3) {
             partida.setTerminada(true);
-            //mostrar mensaje por pantalla
-//            TextView mensaje = findViewById(R.id.mensaje);
-//            mensaje.setText(R.string.empate);
-//
-//            mensaje.setVisibility(View.VISIBLE);
-
-//            AlphaAnimation animation_alpha = new AlphaAnimation(0f, 1f);
-//            animation_alpha.setDuration(1000);
-//            mensaje.startAnimation(animation_alpha);
-            //
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    //volver al layout original de la actividad
-//                    ImageView tachado = view.findViewById(tachados[partida.comprobarGanador()[1]]);
-//
-//                    tachado.setVisibility(View.GONE);
-//                    partida = new Partida();
-//                }
-//            }, 2500);
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    restart(8, view);
+                }
+            }, 2000);
         }
-
     }
 
     /**
      * Metodo que tacha con una linea roja la combinación ganadora
+     *
      * @param n Numero de la combinacion ganadora
      */
-    public void tachar(int n, View view){
-        switch (n){
+    public void tachar(int n, View view) {
+        switch (n) {
             case 0:
                 t0.setVisibility(View.VISIBLE);
                 break;
@@ -298,20 +397,28 @@ public class tres_en_rallaFragment extends Fragment {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                // Do something after 5s = 5000ms
+
                 int punto1 = Integer.parseInt((String) j1.getText());
                 int punto2 = Integer.parseInt((String) j2.getText());
-                if (punto1 > punto2 && punto1 == 3){
-                    // gano la rata 1
-                }else if(punto2 > punto1 && punto2 == 3){
-                    // gano la rata 2
-                }else{
-                    restart(n,view);
+
+                if (punto1 > punto2 && punto1 == 3) {
+                    mensaje.setVisibility(View.VISIBLE);
+                    mensaje.setText("Ha ganado el Jugador 1");
+                    restart.setVisibility(View.VISIBLE);
+                    exit.setVisibility(View.VISIBLE);
+                } else if (punto2 > punto1 && punto2 == 3) {
+                    mensaje.setVisibility(View.VISIBLE);
+                    mensaje.setText("Ha ganado el Jugador 2");
+                    restart.setVisibility(View.VISIBLE);
+                    exit.setVisibility(View.VISIBLE);
+                } else {
+                    restart(n, view);
                 }
             }
         }, 2000);
     }
-    public void restart(int n, View view){
+
+    public void restart(int n, View view) {
         partida = new Partida();
         switch (n) {
             case 0:
@@ -339,6 +446,14 @@ public class tres_en_rallaFragment extends Fragment {
                 t7.setVisibility(View.GONE);
                 break;
             default:
+                t0.setVisibility(View.GONE);
+                t1.setVisibility(View.GONE);
+                t2.setVisibility(View.GONE);
+                t3.setVisibility(View.GONE);
+                t4.setVisibility(View.GONE);
+                t5.setVisibility(View.GONE);
+                t6.setVisibility(View.GONE);
+                t7.setVisibility(View.GONE);
                 break;
         }
         a1.setImageResource(R.drawable.casilla);

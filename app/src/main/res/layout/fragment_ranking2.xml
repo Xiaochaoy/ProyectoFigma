@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ranking2Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Top"
+            android:textStyle="bold|italic"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Name"
+            android:textStyle="bold|italic"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Velocidad"
+            android:textStyle="bold|italic"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="3"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="4"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="5"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="6"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="7"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="8"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="9"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="10"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="136dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Dani si apruebo"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Xiao"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Novia de Xiao"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Uriol"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Joel"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Alan"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="JK"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Chema"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Juanka"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="Dani si suspendo"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="272dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="1s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="1,5s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="2s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="3s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="4s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="5s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="6s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="7s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="8s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:text="100000000000s"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+</FrameLayout>

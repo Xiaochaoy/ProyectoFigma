@@ -8,6 +8,7 @@
     android:background="@drawable/background_color"
     tools:context=".tres_en_rallaFragment">
 
+
     <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -21,7 +22,7 @@
             android:id="@+id/textview1"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/perfil" />
+            android:src="@drawable/jk" />
 
         <TextView
             android:id="@+id/jugador1"
@@ -50,7 +51,7 @@
             android:id="@+id/textview2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/perfil"/>
+            android:src="@drawable/chica"/>
 
 
     </com.google.android.flexbox.FlexboxLayout>
@@ -219,5 +220,86 @@
                 android:visibility="invisible"
                 app:srcCompat="@drawable/tachado" />
         </RelativeLayout>
+
     </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="700dp"
+        android:background="#A39292"
+        android:hint="Chat"
+        android:singleLine="true"
+        android:paddingLeft="15dp" />
+
+    <ImageView
+        android:id="@+id/chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chat"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="700dp"/>
+
+    <LinearLayout
+        android:id="@+id/emoji"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="600dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:visibility="invisible"
+        android:layout_marginLeft="110dp">
+
+        <ImageView
+            android:id="@+id/llorar"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/llorar_normal"/>
+        <ImageView
+            android:id="@+id/enfadado"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/enfadado_normal"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chat1"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="100dp" />
+    <ImageView
+        android:id="@+id/chat2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="180dp" />
+
+    <TextView
+        android:id="@+id/ganador"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="550dp"
+        android:textSize="32dp"
+        android:textStyle="bold|italic"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="60dp"
+        android:visibility="invisible"
+        android:text="Restart"/>
+    <Button
+        android:id="@+id/exit_3ralla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="245dp"
+        android:visibility="invisible"
+        android:text="exit"/>
+
 </RelativeLayout>
