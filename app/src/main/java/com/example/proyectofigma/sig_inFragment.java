@@ -18,7 +18,6 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import org.jetbrains.annotations.Nullable;
 
-
 public class sig_inFragment extends Fragment {
 
     NavController navController;

@@ -1,5 +1,6 @@
 package com.example.proyectofigma;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.proyectofigma.databinding.FragmentRankingBinding;
+import com.gigamole.navigationtabstrip.NavigationTabStrip;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
