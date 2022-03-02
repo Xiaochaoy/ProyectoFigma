@@ -1,6 +1,5 @@
 package com.example.proyectofigma;
 
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,43 +10,42 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import org.jetbrains.annotations.Nullable;
 
-
-public class correr_pausaFragment extends Fragment {
+public class inicioCorrerFragment extends Fragment {
 
     NavController navController;
-    ImageView menu,continuar;
+    ImageView jugar,exit;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_correr_pausa, container, false);
+        return inflater.inflate(R.layout.fragment_inicio_correr, container, false);
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         navController = Navigation.findNavController(view);
-        menu = view.findViewById(R.id.pamenu);
-        continuar = view.findViewById(R.id.continuarCorrer);
 
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_menuFragment);
-            }
-        });
+        jugar = view.findViewById(R.id.startCorrer);
+        exit = view.findViewById(R.id.exitCorrer);
 
-        continuar.setOnClickListener(new View.OnClickListener() {
+        jugar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 navController.navigate(R.id.action_correr);
             }
         });
 
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.juegosFragment);
+            }
+        });
     }
 }

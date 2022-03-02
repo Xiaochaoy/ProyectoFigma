@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/zeroFragment">
+    app:startDestination="@id/juego_correrFragment">
 
     <fragment
         android:id="@+id/log_inFragment"
@@ -125,6 +125,16 @@
         android:name="com.example.proyectofigma.rankingFragment"
         android:label="fragment_ranking"
         tools:layout="@layout/fragment_ranking" />
+    <fragment
+        android:id="@+id/zeroCorrerFragment"
+        android:name="com.example.proyectofigma.zeroCorrerFragment"
+        android:label="fragment_zero_correr"
+        tools:layout="@layout/fragment_zero_correr" />
+    <fragment
+        android:id="@+id/inicioCorrerFragment"
+        android:name="com.example.proyectofigma.inicioCorrerFragment"
+        android:label="fragment_inicio_correr"
+        tools:layout="@layout/fragment_inicio_correr" />
     <action
         android:id="@+id/action_inicioFragment"
         app:destination="@+id/inicioFragment"
@@ -286,4 +296,19 @@
         app:exitAnim="@android:anim/fade_out"
         app:popEnterAnim="@android:anim/fade_in"
         app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_zeroCorrer"
+        app:destination="@+id/zeroCorrerFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_inicioCorrer"
+        app:destination="@+id/inicioCorrerFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
 </navigation>

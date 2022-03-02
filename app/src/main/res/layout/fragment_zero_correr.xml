@@ -4,7 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_color"
-    tools:context=".juego_cofreFragment">
+    tools:context=".zeroCorrerFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/correr"
+        android:scaleType="center"/>
 
 </FrameLayout>

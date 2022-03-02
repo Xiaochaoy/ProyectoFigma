@@ -2,63 +2,128 @@ package com.example.proyectofigma;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import android.os.Handler;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link juego_correrFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.q42.android.scrollingimageview.ScrollingImageView;
+
+import org.jetbrains.annotations.Nullable;
+
 public class juego_correrFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public juego_correrFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment juego_correrFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static juego_correrFragment newInstance(String param1, String param2) {
-        juego_correrFragment fragment = new juego_correrFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    ImageView personaje, agachar, saltar, personaje2, personaje3, ganasteIMG, pausa;
+    int tempo = 0;
+    boolean campo;
+    ScrollingImageView s1, s2, s3, s4, s5;
+    TextView ganar;
+    NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_juego_correr, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        campo = false;
+        navController = Navigation.findNavController(view);
+        personaje = view.findViewById(R.id.personaje);
+        personaje2 = view.findViewById(R.id.personaje2);
+        personaje3 = view.findViewById(R.id.personaje3);
+        agachar = view.findViewById(R.id.agachar);
+        saltar = view.findViewById(R.id.saltar);
+        ganasteIMG = view.findViewById(R.id.ganasteImg);
+        ganar = view.findViewById(R.id.ganastebro);
+        pausa = view.findViewById(R.id.pausa);
+
+        s1 = view.findViewById(R.id.fondo1);
+        s2 = view.findViewById(R.id.fondo2);
+        s3 = view.findViewById(R.id.fondo3);
+        s4 = view.findViewById(R.id.fondo4);
+        s5 = view.findViewById(R.id.fondo5);
+
+        pausa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.correr_pausaFragment);
+            }
+        });
+
+        agachar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!campo) {
+                    campo = true;
+                    personaje.setVisibility(View.GONE);
+                    personaje3.setVisibility(View.VISIBLE);
+                    tempo++;
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Do something after 5s = 5000ms
+                            personaje.setVisibility(View.VISIBLE);
+                            personaje3.setVisibility(View.GONE);
+                            campo = false;
+                        }
+                    }, 500);
+                }
+                terminar(tempo);
+            }
+        });
+        saltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!campo) {
+                    campo = true;
+                    personaje.setVisibility(View.GONE);
+                    personaje2.setVisibility(View.VISIBLE);
+                    tempo++;
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Do something after 5s = 5000ms
+                            personaje.setVisibility(View.VISIBLE);
+                            personaje2.setVisibility(View.GONE);
+                            campo = false;
+                        }
+                    }, 500);
+                }
+                terminar(tempo);
+            }
+        });
+
+
+    }
+
+    public void ganaste() {
+        ganasteIMG.setVisibility(View.VISIBLE);
+        ganar.setVisibility(View.VISIBLE);
+    }
+
+    public void terminar(int halo) {
+        if (halo == 20) {
+            s1.stop();
+            s2.stop();
+            s3.stop();
+            s4.stop();
+            s5.stop();
+            ganaste();
+        }
     }
 }

@@ -4,33 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_color"
-    tools:context=".correr_pausaFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pausa"
-        android:textSize="42sp"
-        android:textColor="@color/white"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold|italic"
-        android:layout_gravity="center|top"/>
+    tools:context=".inicioCorrerFragment">
 
     <ImageView
-        android:id="@+id/pamenu"
+        android:layout_width="186dp"
+        android:layout_height="172dp"
+        android:src="@drawable/correr"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/startCorrer"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginRight="100dp"
         android:scaleType="centerCrop"
         android:layout_marginTop="50dp"
-        android:src="@drawable/menu" />
+        android:src="@drawable/start" />
 
     <TextView
-        android:id="@+id/patras7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menu"
+        android:text="Jugar"
         android:textSize="32sp"
         android:layout_marginTop="90dp"
         android:textStyle="bold|italic"
@@ -40,10 +37,10 @@
 
 
     <ImageView
-        android:id="@+id/continuarCorrer"
-        android:layout_width="50dp"
+        android:id="@+id/exitCorrer"
+        android:layout_width="38dp"
         android:layout_height="50dp"
-        android:src="@drawable/continuar"
+        android:src="@drawable/exit"
         android:layout_gravity="center"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="50dp"
@@ -51,7 +48,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continuar"
+        android:text="Exit"
         android:textSize="32sp"
         android:layout_marginTop="90dp"
         android:textStyle="bold|italic"

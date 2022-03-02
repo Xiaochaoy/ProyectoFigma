@@ -53,10 +53,10 @@ public class juegosFragment extends Fragment {
         correr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_correr);
+                navController.navigate(R.id.action_zeroCorrer);
             }
         });
-        correr.setOnClickListener(new View.OnClickListener() {
+        cofre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_cofre);
