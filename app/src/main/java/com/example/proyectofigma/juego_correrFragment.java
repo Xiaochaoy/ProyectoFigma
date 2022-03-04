@@ -62,7 +62,6 @@ public class juego_correrFragment extends Fragment {
                 navController.navigate(R.id.correr_pausaFragment);
             }
         });
-
         agachar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

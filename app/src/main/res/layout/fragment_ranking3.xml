@@ -10,9 +10,10 @@
         android:layout_height="40dp">
 
         <TextView
-            android:layout_width="136dp"
+            android:layout_width="90dp"
             android:layout_height="match_parent"
             android:text="Top"
+            android:textSize="30dp"
             android:textStyle="bold|italic"
             android:gravity="center"/>
 
@@ -20,248 +21,294 @@
             android:layout_width="136dp"
             android:layout_height="match_parent"
             android:text="Name"
+            android:textSize="30dp"
             android:textStyle="bold|italic"
             android:gravity="center"/>
 
         <TextView
-            android:layout_width="136dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Partidas ganadas"
+            android:text="Partida Ganada"
+            android:textSize="22dp"
             android:textStyle="bold|italic"
             android:gravity="center"/>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="1"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="2"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="3"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="4"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="5"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="6"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="7"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="8"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="9"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="10"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textSize="30dp" />
 
-    <LinearLayout
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="136dp"
-        android:orientation="vertical">
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textSize="30dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Dani si apruebo"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Xiao"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="10"
+                    android:textSize="30dp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Novia de Xiao"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Uriol"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Dani si apruebo"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Joel"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Xiao"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Alan"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Novia de Xiao"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="JK"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Uriol"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Chema"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Joel"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Juanka"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Alan"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="Dani si suspendo"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="JK"
+                    android:textSize="18dp" />
 
-    <LinearLayout
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="272dp"
-        android:orientation="vertical">
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Chema"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="9999999999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Juanka"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="9999999999998"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="999999999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Dani si suspendo"
+                    android:textSize="18dp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="99999999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="227dp"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="9999999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="9999999999999"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="999999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="9999999999998"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="99999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="999999999999"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="9999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="99999999999"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="999999"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="9999999999"
+                    android:textSize="18dp" />
 
-        <TextView
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:text="9"
-            android:layout_marginTop="20dp"
-            android:gravity="center"/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="999999999"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="99999999"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="9999999"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="999999"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </ScrollView>
 </FrameLayout>

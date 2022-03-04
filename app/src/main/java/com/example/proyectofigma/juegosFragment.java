@@ -59,7 +59,7 @@ public class juegosFragment extends Fragment {
         cofre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_cofre);
+                navController.navigate(R.id.action_zeroCofre);
             }
         });
 

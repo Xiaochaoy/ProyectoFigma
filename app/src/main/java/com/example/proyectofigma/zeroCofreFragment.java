@@ -1,7 +1,5 @@
 package com.example.proyectofigma;
 
-import android.app.Activity;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,8 +14,7 @@ import android.view.ViewGroup;
 
 import org.jetbrains.annotations.Nullable;
 
-
-public class zeroCorrerFragment extends Fragment {
+public class zeroCofreFragment extends Fragment {
 
     NavController navController;
 
@@ -25,8 +22,7 @@ public class zeroCorrerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        setUserVisibleHint(true);
-        return inflater.inflate(R.layout.fragment_zero_correr, container, false);
+        return inflater.inflate(R.layout.fragment_zero_cofre, container, false);
     }
 
     @Override
@@ -40,18 +36,8 @@ public class zeroCorrerFragment extends Fragment {
             @Override
             public void run() {
                 // Do something after 5s = 5000ms
-                navController.navigate(R.id.action_inicioCorrer);
+                navController.navigate(R.id.action_inicioCofre);
             }
         }, 1500);
     }
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        Activity a = getActivity();
-        if (isVisibleToUser) {
-            if (a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
-    }
-
 }

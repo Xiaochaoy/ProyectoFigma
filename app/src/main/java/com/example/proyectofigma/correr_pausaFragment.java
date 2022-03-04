@@ -1,5 +1,7 @@
 package com.example.proyectofigma;
 
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.os.Bundle;
 
@@ -38,6 +40,7 @@ public class correr_pausaFragment extends Fragment {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setUserVisibleHint(false);
                 navController.navigate(R.id.action_menuFragment);
             }
         });
@@ -49,5 +52,14 @@ public class correr_pausaFragment extends Fragment {
             }
         });
 
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Activity a = getActivity();
+        if (!isVisibleToUser) {
+            if (a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
     }
 }

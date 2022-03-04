@@ -33,7 +33,7 @@
 
 
     <com.github.florent37.materialtextfield.MaterialTextField
-        app:mtf_labelColor="#666"
+        app:mtf_labelColor="#000000"
         android:id="@+id/contrasenyaactual"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@id/contrasenyaactual"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:mtf_labelColor="#666"
+        app:mtf_labelColor="#000000"
         app:mtf_image="@drawable/contrasenya">
 
         <EditText

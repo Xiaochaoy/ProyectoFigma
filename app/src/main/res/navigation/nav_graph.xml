@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/juego_correrFragment">
+    app:startDestination="@id/rankingFragment">
 
     <fragment
         android:id="@+id/log_inFragment"
@@ -306,6 +306,32 @@
     <action
         android:id="@+id/action_inicioCorrer"
         app:destination="@+id/inicioCorrerFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/zeroCofreFragment"
+        android:name="com.example.proyectofigma.zeroCofreFragment"
+        android:label="fragment_zero_cofre"
+        tools:layout="@layout/fragment_zero_cofre" />
+    <fragment
+        android:id="@+id/inicioCofreFragment"
+        android:name="com.example.proyectofigma.inicioCofreFragment"
+        android:label="fragment_inicio_cofre"
+        tools:layout="@layout/fragment_inicio_cofre" />
+
+    <action
+        android:id="@+id/action_zeroCofre"
+        app:destination="@+id/zeroCofreFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
+    <action
+        android:id="@+id/action_inicioCofre"
+        app:destination="@+id/inicioCofreFragment"
         app:enterAnim="@android:anim/fade_in"
         app:exitAnim="@android:anim/fade_out"
         app:popEnterAnim="@android:anim/fade_in"
