@@ -228,6 +228,8 @@ public class tres_en_rallaFragment extends Fragment {
                 exit.setVisibility(View.GONE);
                 j1.setText("0");
                 j2.setText("0");
+                p1 = 0;
+                p2 = 0;
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
@@ -420,6 +422,7 @@ public class tres_en_rallaFragment extends Fragment {
 
     public void restart(int n, View view) {
         partida = new Partida();
+
         switch (n) {
             case 0:
                 t0.setVisibility(View.GONE);
@@ -465,6 +468,5 @@ public class tres_en_rallaFragment extends Fragment {
         c1.setImageResource(R.drawable.casilla);
         c2.setImageResource(R.drawable.casilla);
         c3.setImageResource(R.drawable.casilla);
-
     }
 }
