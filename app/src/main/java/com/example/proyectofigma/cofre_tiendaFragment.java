@@ -55,7 +55,16 @@ public class cofre_tiendaFragment extends Fragment {
             }
         });
 
-        if (!compradoCantidad && dineroViewModel.getDinero() > 50){
+
+        if(compradoCofre){
+            compracofre.setImageResource(R.drawable.cofrecomprado);
+
+        }
+        if (compradoCantidad){
+            compracantidad.setImageResource(R.drawable.dinerocomprado);
+        }
+
+        if (!compradoCantidad && dineroViewModel.getDinero() >= 50){
             comprarca.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -64,10 +73,9 @@ public class cofre_tiendaFragment extends Fragment {
                     compracantidad.setImageResource(R.drawable.dinerocomprado);
                 }
             });
-            compracantidad.setImageResource(R.drawable.dinero);
         }
 
-        if (!compradoCofre && dineroViewModel.getDinero() > 100){
+        if (!compradoCofre && dineroViewModel.getDinero() >= 100){
             comprarco.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -76,8 +84,6 @@ public class cofre_tiendaFragment extends Fragment {
                     compracofre.setImageResource(R.drawable.cofrecomprado);
                 }
             });
-            compracofre.setImageResource(R.drawable.cofre);
-
         }
 
         volver.setOnClickListener(new View.OnClickListener() {

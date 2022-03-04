@@ -89,11 +89,12 @@ public class editarPerfilFragment extends Fragment {
             }
         });
 
-        foto.setOnClickListener(new View.OnClickListener() {
+        foto.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View view) {
+            public boolean onLongClick(View v) {
                 fotos.setVisibility(View.VISIBLE);
                 guardar.setVisibility(View.GONE);
+                return false;
             }
         });
 

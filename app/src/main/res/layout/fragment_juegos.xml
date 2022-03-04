@@ -17,12 +17,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/juegos"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="80dp"/>
+
     <TextView
         android:id="@+id/juegos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
         android:text="Juegos"
         android:textColor="@color/black"
         android:textSize="50sp"
@@ -59,32 +67,50 @@
                     android:textSize="50dp" />
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <ImageView
-                android:id="@+id/correr"
-                android:layout_width="211dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="50dp"
-                android:src="@drawable/correr" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:text="COFRE"
-                android:textColor="@color/black"
-                android:textSize="50dp" />
-        </LinearLayout>
-            <ImageView
-                android:id="@+id/tresralla"
-                android:layout_width="211dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                android:src="@drawable/tresralla" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/correr"
+                    android:layout_width="211dp"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/correr" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text="CORRER"
+                    android:textColor="@color/black"
+                    android:textSize="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tresralla"
+                    android:layout_width="211dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/tresralla" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text="TRES EN RAYA"
+                    android:textColor="@color/black"
+                    android:textSize="50dp" />
+            </LinearLayout>
         </LinearLayout>
 
     </HorizontalScrollView>

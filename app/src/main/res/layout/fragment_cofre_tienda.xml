@@ -54,6 +54,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombretienda"/>
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 "
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombretienda"/>
+
     <ImageView
         android:id="@+id/comprado2"
         android:layout_width="100dp"
@@ -74,6 +87,18 @@
         android:textColor="@color/black"
         android:textSize="40sp"
         android:layout_marginTop="170dp"
+        android:layout_marginLeft="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombretienda"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginTop="250dp"
         android:layout_marginLeft="150dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

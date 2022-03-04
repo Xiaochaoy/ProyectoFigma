@@ -18,37 +18,12 @@
         app:layout_constraintLeft_toLeftOf="parent"/>
 
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="79dp"
-        android:layout_height="63dp"
-        android:src="@drawable/logo"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="90dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:text="X-TEAM"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold|italic"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <ImageView
         android:id="@+id/foto"
         android:layout_width="129dp"
         android:layout_height="101dp"
         android:layout_marginTop="100dp"
         android:src="@drawable/jk"
-        android:layout_marginLeft="30dp"
-        app:layout_constraintLeft_toRightOf="@+id/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
